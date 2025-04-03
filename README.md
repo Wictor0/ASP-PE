@@ -3,10 +3,11 @@
 </p>
 
 <h2>Sobre o Projeto</h2>
+<p>
     <strong>ASP-PE</strong> (Associação de Parkinson de Pernambuco) é uma organização sem fins lucrativos que acolhe, informa e promove qualidade de vida para pessoas com Parkinson e seus familiares.
 </p>
 <p>
-    Este repositório contém o desenvolvimento do site oficial da ASP-PE, que tem como objetivo oferecer informações, suporte e um espaço digital para a comunidade.
+    Este repositório contém o desenvolvimento do <a href="https://wictor0.github.io/ASP-PE/" target="_blank"><strong>site oficial da ASP-PE</strong></a>, que tem como objetivo oferecer informações, suporte e um espaço digital para a comunidade.
 </p>
 
 <h2>Tecnologias Utilizadas</h2>

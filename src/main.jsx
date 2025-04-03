@@ -89,6 +89,13 @@ Conexões Significativas: Conheça e se conecte com pessoas inspiradoras.
 Desenvolvimento Pessoal: Aprenda e vivencie experiências enriquecedoras.
 `;
 
+const parceiroText = `Quer ser um parceiro e fazer parte dessa transformação? 
+
+  Entre em contato pelo e-mail: parkinsonpernambuco@gmail.com 
+  
+  ou clique no botão abaixo:
+`;
+
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) {
     return null;
@@ -196,6 +203,7 @@ const App = () => {
   const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const [isAssociateModalOpen, setIsAssociateModalOpen] = useState(false);
+  const [isParceiroModalOpen, setIsParceiroModalOpen] = useState(false);
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -228,6 +236,14 @@ const App = () => {
   };
   const closeAssociateModal = () => {
     setIsAssociateModalOpen(false);
+  };
+
+  const openParceiroModal = () => {
+    setIsParceiroModalOpen(true);
+  };
+
+  const closeParceiroModal = () => {
+    setIsParceiroModalOpen(false);
   };
 
   return (
@@ -521,7 +537,7 @@ const App = () => {
             </p>
             <div
               className="quero-ser-parceiro-container"
-              onClick={openPartnerModal}
+              onClick={openParceiroModal}
             >
               <a className="quero-ser-parceiro-button">Quero ser um parceiro</a>
               <span className="seta-parceiro">→</span>
@@ -542,6 +558,25 @@ const App = () => {
           </div>
         </div>
       </section>
+      <Modal isOpen={isParceiroModalOpen} onClose={closeParceiroModal}>
+        <h2>Quero ser parceiro</h2>
+        <p>
+          {parceiroText.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
+        <a
+          className="zap-button"
+          href="https://wa.me/558186133688"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="zap-button" src={zapButton} alt="WhatsApp" />
+        </a>
+      </Modal>
 
       {/* Footer */}
       <footer className="main-footer" id="main-footer">
