@@ -39,6 +39,10 @@ import emailIcon from "./assets/email.svg";
 import whatsappIcon from "./assets/whatsapp.svg";
 import phoneIcon from "./assets/phone.svg";
 
+// Importações para o Modal
+import zapButton from "./assets/zap.svg";
+import formButton from "./assets/forms.svg";
+
 const donationText = `Como Contribuir
 
 Apoie a ASP-PE e faça a diferença!
@@ -70,9 +74,6 @@ const partnerText = `Junte-se à Associação de Parkinson de Pernambuco (ASP-PE
   Horário de funcionamento  
   Atendimento de segunda a sexta, a partir das 8h.  
   📍 Av. Caxangá, 2200 - Cordeiro, Recife.
-
-  Dúvidas?  
-  https://wa.me/558186133688
 `;
 
 const volunteerText = `🌟 Quer fazer a diferença na vida de quem vive com Parkinson?
@@ -86,10 +87,6 @@ Impacto Real: Ajude a melhorar a vida de pessoas com Parkinson.
 Conexões Significativas: Conheça e se conecte com pessoas inspiradoras.
 
 Desenvolvimento Pessoal: Aprenda e vivencie experiências enriquecedoras.
-
-Como se inscrever
-Preencha o formulário de inscrição e nossa equipe entrará em contato para informar os próximos passos.💚
-  📌https://forms.gle/9A4QVKNkk4Y5xYM9A
 `;
 
 const Modal = ({ isOpen, onClose, children }) => {
@@ -439,6 +436,14 @@ const App = () => {
             </React.Fragment>
           ))}
         </p>
+        <a
+          className="form-button"
+          href="https://forms.gle/9A4QVKNkk4Y5xYM9A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="form-button" src={formButton} alt="Formulário" />
+        </a>
       </Modal>
 
       <Modal isOpen={isAssociateModalOpen} onClose={closeAssociateModal}>
@@ -451,6 +456,14 @@ const App = () => {
             </React.Fragment>
           ))}
         </p>
+        <a
+          className="zap-button"
+          href="https://wa.me/558186133688"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="zap-button" src={zapButton} alt="WhatsApp" />
+        </a>
       </Modal>
 
       <Modal isOpen={isPartnerModalOpen} onClose={closePartnerModal}>
@@ -463,6 +476,14 @@ const App = () => {
             </React.Fragment>
           ))}
         </p>
+        <a
+          className="zap-button"
+          href="https://wa.me/558186133688"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="zap-button" src={zapButton} alt="WhatsApp" />
+        </a>
       </Modal>
 
       {/* Seção Histórias que Inspiram */}
