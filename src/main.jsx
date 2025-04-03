@@ -485,7 +485,7 @@ const App = () => {
       <Modal isOpen={isPartnerModalOpen} onClose={closePartnerModal}>
         <h2>Quero ser parceiro</h2>
         <p>
-          {partnerText.split("\n").map((line, index) => (
+          {parceiroText.split("\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}
               <br />
